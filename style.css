@@ -1,0 +1,11 @@
+body {
+  margin-left: 25%;
+  margin-right: 25%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  text-align: right;
+}
+
+h1 {
+  color: rgb(80, 80, 80);
+}

@@ -1,4 +1,4 @@
-<?php require_once 'db.php'; ?>
+<?php require_once 'index.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
   <body>
     <nav class="navbar" role="navigation">
       <ul class="navbar__links">
-        <li class="navbar__link"><a href="index.php">Dashboard</a></li>
+        <li class="navbar__link"><a href="dashboard.php">Dashboard</a></li>
         <li class="navbar__link"><a href="visualization.php">Visualization</a></li>
       </ul>
       <button class="burger">
@@ -22,63 +22,55 @@
     </nav>
 
     <div class="container">
-      <form action="index.php" method="post">
+      <form action="dashboard.php" method="post">
         <div class="cards">
           <div class="card">
-            <h2>Item 1</h2>
+            <?php getName($conn, 1); ?>
             <div class="title">
               <div class="changeTitle">
                 Changer titre
               </div>
-              <input type="text" name="title1" placeholder="titre">
+              <input type="text" name="title1" id="title1" placeholder="Nouveau titre">
             </div>
 
             <div class="toShow">
               Afficher l'item 1
-              <label class="switch">
-                <input type="checkbox" name="state1"/>
-                <span class="slider round"></span>
-              </label>
+              <?php checkButton($conn, 1); ?>
             </div>
           </div>
 
           <div class="card">
-            <h2>Item 2</h2>
+            <?php getName($conn, 2); ?>
             <div class="title">
               <div class="changeTitle">
                 Changer titre
               </div>
-              <input type="text" name="title2" placeholder="titre">
+              <input type="text" name="title2" id="title2" placeholder="Nouveau titre">
             </div>
 
             <div class="toShow">
               Afficher l'item 2
-              <label class="switch">
-                <input type="checkbox" name="state2"/>
-                <span class="slider round"></span>
-              </label>
+              <?php checkButton($conn, 2); ?>
             </div>
           </div>
 
           <div class="card">
-            <h2>Item 3</h2>
+            <?php getName($conn, 3); ?>
             <div class="title">
               <div class="changeTitle">
                 Changer titre
               </div>
-              <input type="text" name="title3" placeholder="titre">
+              <input type="text" name="title3" id="title3" placeholder="Nouveau titre">
             </div>
 
             <div class="toShow">
               Afficher l'item 3
-              <label class="switch">
-                <input type="checkbox" name="state3"/>
-                <span class="slider round"></span>
-              </label>
+              <?php checkButton($conn, 3) ?>
             </div>
           </div>
         </div>
-        <input type="submit" value="Enregistrer">
+        <input name="submit" id="submit" type="submit" value="Enregistrer">
+        <?php update($conn); ?>
       </form>
     </div>
   </body>

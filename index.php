@@ -8,7 +8,17 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <h1>Panneau de contrôle</h1>
+    <nav class="navbar" role="navigation">
+      <ul class="navbar__links">
+        <li class="navbar__link"><a href="dashboard.php">Dashboard</a></li>
+        <li class="navbar__link"><a href="visualization.php">Visualization</a></li>
+      </ul>
+      <button class="burger">
+        <span class="bar"></span>
+      </button>
+      <h1>Panneau de contrôle</h1>
+    </nav>
+
     <div class="container">
       <div class="cards">
         <div class="card">
@@ -67,4 +77,5 @@
       </div>
     </div>
   </body>
+  <script src="menu.js"></script>
 </html>

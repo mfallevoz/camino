@@ -8,7 +8,6 @@ function getNames($conn) {
 
     if (mysqli_num_rows($result)>0) { 
         while ($row=mysqli_fetch_assoc($result)) { 
-            var_dump($row);
             echo "<div class='item item".$row["id"]."'>" . $row['title'] . "</div>";
         }
     }
@@ -99,18 +98,6 @@ function checkButton($conn, $id) {
                 <input type='checkbox' name='state$id' id='state$id'/>
                 <span class='slider round'></span>
               </label>";
-    }
-}
-
-function data($conn) {
-    $sql = "SELECT * FROM `items`";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    
-    if (mysqli_num_rows($result)>0) { 
-        while ($row=mysqli_fetch_assoc($result)) { 
-            var_dump($row);
-        }
     }
 }
 

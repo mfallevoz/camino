@@ -10,7 +10,7 @@
   <body>
     <nav class="navbar" role="navigation">
       <ul class="navbar__links">
-        <li class="navbar__link"><a href="dashboard.php">Dashboard</a></li>
+        <li class="navbar__link"><a href="index.php">Dashboard</a></li>
         <li class="navbar__link"><a href="visualization.php">Visualization</a></li>
       </ul>
       <button class="burger">

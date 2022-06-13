@@ -1,3 +1,5 @@
+<?php require_once 'index.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +23,7 @@
 
     <div class="container">
         <div class="visualizer">
-            <div class="item item1">ITEM 1</div>
-            <div class="item item2">ITEM 2</div>
-            <div class="item item3">ITEM 3</div>
+          <?php getName($conn) ?>
         </div>
     </div>
 </body>
